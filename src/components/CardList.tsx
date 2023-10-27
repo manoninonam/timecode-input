@@ -1,15 +1,15 @@
-import { Card } from '@mui/material'
-import React from 'react'
-
+import { Stack } from "@mui/material";
+import { ResultCard } from "./Card";
+import React from "react";
 
 export default function CardList(data: any) {
-
-  const searchResults = data.data
+  const searchResults = data.data;
 
   return (
-    <>
-    <Card>hello</Card>
-    {searchResults?.map((item: any) => (<Card>{item.word}</Card>))}
-    </>
-  )
+    <Stack direction='row' flexWrap='wrap'>
+      {searchResults && searchResults.map((searchResult: any, index:number) => (
+        <ResultCard searchResult={searchResult}/>
+      ))}
+    </Stack>
+  );
 }
