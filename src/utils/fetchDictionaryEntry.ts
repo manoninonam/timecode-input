@@ -1,15 +1,20 @@
-
-  const baseURL = `https://api.dictionaryapi.dev/api/v2/entries/en/`
   
-  export async function fetchDictionaryEntry(searchQuery: string) {
+  export function fetchDictionaryEntry(searchQuery: string, setSearchResults: any) {
     try {
-      const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchQuery}`);
+    fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${searchQuery}`
+    )
+    .then((response) => {
       if (!response.ok) {
-        throw new Error("Network response was not OK");
+        console.log(`HTTP error! Status: ${response.status}`);
       }
-      const results = await response.json();
-    } catch (error) {
-      console.error("Error:", error);
-    }
+      return response.json();
+    })
+    .then((results) => {
+      setSearchResults(results)
+    });
   }
+  catch (error) {
+    console.log(error)
+  }
+}
   

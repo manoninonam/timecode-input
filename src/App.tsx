@@ -1,4 +1,4 @@
-import { Card, OutlinedInput, Button } from "@mui/material";
+import { OutlinedInput, Button } from "@mui/material";
 import { fetchDictionaryEntry } from "./utils/fetchDictionaryEntry";
 import { useState } from "react";
 import CardList from "./components/CardList";
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <OutlinedInput value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}/>
-      <Button onClick={() => setSearchResults(fetchDictionaryEntry(searchQuery))}>Search</Button>
+      <Button onClick={() => setSearchResults(fetchDictionaryEntry(searchQuery, setSearchResults))}>Search</Button>
       <CardList data={searchResults}/>
     </div>
   );
