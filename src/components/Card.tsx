@@ -9,15 +9,14 @@ import {
 
 export const Card = styled(MuiCard)({
   color: "darkslategray",
-  minWidth: "300px",
-  maxWidth: "500px",
+  width: "400px",
   padding: "10px",
   margin: "10px",
 });
 
-export const ResultCard = ({ searchResult }: any) => {
+export const ResultCard = ({ searchResult, index }: any) => {
   return (
-    <Card>
+    <Card >
       <CardContent>
         <Typography variant="h5" component="div">
           {searchResult.word}
@@ -27,14 +26,14 @@ export const ResultCard = ({ searchResult }: any) => {
         </Typography>
         <Typography>meanings:</Typography>
         {searchResult.meanings.map((meaning: any, index: number) => (
-          <div>
+          <div key={`meaning-${index}`}>
             <Typography sx={{ mt: 1.5, mb: 0.5 }} color="text.secondary">
               {meaning.partOfSpeech}
             </Typography>
             {meaning.definitions.map((definition: any, index: number) => (
-              <Typography sx={{ mb: 0.2}} variant="body2">
-                {`${index + 1}) `}
+              <Typography key={`definitions-${index}`} sx={{ mb: 0.2 }} variant="body2">
                 {definition.definition}
+                {`${index + 1}) `}
               </Typography>
             ))}
           </div>
