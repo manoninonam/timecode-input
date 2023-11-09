@@ -8,14 +8,14 @@ type phonetics = {
     };
   };
 
-  type definitions = {
+ export type definitions = {
     definition: string;
     synonyms: string[];
     acronyms: string[];
 
   }
 
-  type meanings = {
+  export type meanings = {
     partOfSpeech: string;
     definitions: definitions[];
   }

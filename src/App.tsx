@@ -2,7 +2,7 @@ import { OutlinedInput, Button } from "@mui/material";
 import { fetchDictionaryEntry } from "./utils/fetchDictionaryEntry";
 import { Dispatch, SetStateAction, useState } from "react";
 import CardList from "./components/CardList";
-import { searchResult } from "./components/types";
+import { searchResult } from "./types/SearchResult";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -19,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <OutlinedInput
+        sx={{m: '10px'}}
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />

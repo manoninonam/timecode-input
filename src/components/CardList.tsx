@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import { ResultCard } from "./Card";
-import { searchResult } from "./types";
+import { searchResult } from "../types/SearchResult";
 
 type CardListProps = {
   data: searchResult[];
