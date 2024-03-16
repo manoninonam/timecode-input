@@ -1,32 +1,20 @@
-import { OutlinedInput, Button } from "@mui/material";
-import { fetchDictionaryEntry } from "./utils/fetchDictionaryEntry";
-import { Dispatch, SetStateAction, useState } from "react";
-import CardList from "./components/CardList";
-import { searchResult } from "./types/SearchResult";
+import { Stack, Typography } from "@mui/material";
+import TimecodeInput from "./components/TimecodeInput/TimecodeInput";
+import { ControlledTimecode } from "./examples/ControlledTimecode";
+import { ControlledTimecodeWithRTL } from "./examples/ControlledTimecodeWithRTL";
+import { TimecodeWithValue } from "./examples/TimecodeWithValue";
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState<string>("");
-  const [searchResults, setSearchResults] = useState<searchResult[]>([]);
-
-  async function handleClick(
-    searchQuery: string,
-    setSearchResults: Dispatch<SetStateAction<searchResult[]>>
-  ) {
-    const fetchedResults = fetchDictionaryEntry(searchQuery);
-    setSearchResults(await fetchedResults);
-  }
-
   return (
     <div className="App">
-      <OutlinedInput
-        sx={{m: '10px'}}
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-      />
-      <Button onClick={() => handleClick(searchQuery, setSearchResults)}>
-        Search
-      </Button>
-      <CardList data={searchResults} />
+      <Stack spacing={2} p={2}>
+        <TimecodeInput frameRate={25} />
+        <TimecodeInput frameRate={29.97}/>
+        <Typography>Examples</Typography>
+        <ControlledTimecode />
+        <ControlledTimecodeWithRTL />
+        <TimecodeWithValue />
+      </Stack>
     </div>
   );
 }
