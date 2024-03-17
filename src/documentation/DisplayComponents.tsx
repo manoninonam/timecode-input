@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { Stack, Box, Typography, Accordion } from "@mui/material";
+import { Stack, Box, Typography } from "@mui/material";
 import { palette } from "../utils/palette";
 
 export const ExampleTimecodeContainer = styled(Stack)({
@@ -11,21 +11,12 @@ export const ExampleTimecodeContainer = styled(Stack)({
 export const ExampleTextContainer = styled(Box)({
   padding: "12px",
   border: "white 1px solid",
-  backgroundColor: "#15182D",
+  backgroundColor: palette.background.textfield,
   flexGrow: 1,
 });
 
-export const ExampleTimecodeContainerText = styled(Typography)({
+export const DocumentationTimecodeContainerText = styled(Typography)({
   fontSize: '12px',
   fontStyle: 'italic'
 });
 
-export const ExampleTextAccordion = styled(Accordion)({
-  backgroundColor: "#15182D",
-  color: palette.text.primary,
-  borderStyle: 'none',
-  boxShadow: 'none',
-
-
-  
-})

@@ -6,7 +6,6 @@ import { palette } from '../../utils/palette';
 export const TimecodeContainer = styled(Box)({
   display: 'flex',
   alignItems: 'center',
-  width: '124px',
   height: '24px',
   boxSizing: 'border-box',
   gap: '1px'

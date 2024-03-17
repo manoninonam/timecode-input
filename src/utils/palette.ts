@@ -3,7 +3,8 @@ export const palette = {
   background: {
     primary: '#0F1120',
     secondary: '#1F2237',
-    tertiary: '#06060D'
+    tertiary: '#06060D',
+    textfield: '#15182D'
   },
   border: {
     primary: '#626472',
