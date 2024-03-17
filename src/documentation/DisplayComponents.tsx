@@ -1,5 +1,6 @@
 import { styled } from "@mui/material/styles";
 import { Stack, Box, Typography, Accordion } from "@mui/material";
+import { palette } from "../utils/palette";
 
 export const ExampleTimecodeContainer = styled(Stack)({
   minWidth: "150px",
@@ -20,5 +21,11 @@ export const ExampleTimecodeContainerText = styled(Typography)({
 });
 
 export const ExampleTextAccordion = styled(Accordion)({
+  backgroundColor: "#15182D",
+  color: palette.text.primary,
+  borderStyle: 'none',
+  boxShadow: 'none',
+
+
   
 })
