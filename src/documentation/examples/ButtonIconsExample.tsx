@@ -54,7 +54,7 @@ const ButtonIconsExample = () => {
               sx={{ display: "flex", alignItems: "center" }}
               position="end"
             >
-              <MarkIn fontSize="small" />
+              <MarkerFilled fontSize="small" />
             </TimecodeInputButton>
           }
         />
