@@ -1,5 +1,6 @@
 import { OutlinedInputProps, Typography } from '@mui/material';
 import {
+  palette,
   TimecodeContainer,
   TimecodeInputBase,
   TimecodeInputBaseContainer,
@@ -393,11 +394,9 @@ const TimecodeInput = ({
                 <Typography
                   sx={{
                     paddingBottom: '1px',
-                    ...(placeholderActive() && {
-                      color: 'red'
-                    }),
+                    color: placeholderActive() ? palette.text.placeholder : palette.text.primary,
                     ...(disabled && {
-                      color: 'black'
+                      color: palette.text.disabled
                     })
                   }}
                 >

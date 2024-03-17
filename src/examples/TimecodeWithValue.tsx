@@ -2,6 +2,7 @@
 import { Box, Stack } from '@mui/material'
 import TimecodeInput from '../components/TimecodeInput/TimecodeInput';
 import { useState } from 'react';
+import { palette } from '../components/TimecodeInput/TimecodeInputStyledComponents';
 
 
 export const TimecodeWithValue = () => {
@@ -21,12 +22,13 @@ export const TimecodeWithValue = () => {
         sx={{
           display: 'flex',
           alignItems: 'center',
-          background: 'grey',
+          background: palette.disabled.disabled_01,
           letterSpacing: '1px',
           padding: '0 10px',
           borderRadius: '8px',
+          color: palette.text.primary,
           border: '1px solid',
-          borderColor: 'grey'
+          borderColor: palette.disabled.disabled_02,
         }}
       >
         {value || '--:--:--;--'}

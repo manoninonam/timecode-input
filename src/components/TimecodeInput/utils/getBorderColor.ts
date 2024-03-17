@@ -1,4 +1,5 @@
 import { Theme } from '@mui/material';
+import { palette } from '../TimecodeInputStyledComponents';
 
 export const getBorderColor = (
   theme: Theme,
@@ -6,8 +7,8 @@ export const getBorderColor = (
   error: boolean | undefined,
   disabled: boolean | undefined
 ) => {
-  if (focused) return 'grey';
-  if (error) return 'red';
-  if (disabled) return 'purple';
-  return 'black';
+  if (focused) return palette.actions.focus;
+  if (error) return palette.actions.error;
+  if (disabled) return palette.disabled.disabled_02;
+  return palette.border.primary;
 };

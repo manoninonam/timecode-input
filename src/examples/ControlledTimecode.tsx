@@ -18,7 +18,7 @@ export const ControlledTimecode = () => {
       defaultValue={'00:00:00;00'}
       frameRate={29.97}
       endButton={
-        <TimecodeInputButton position='end' onClick={handleButtonClick}>
+        <TimecodeInputButton position='end' onClick={handleButtonClick} >
           Go
         </TimecodeInputButton>
       }

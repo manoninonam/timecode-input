@@ -2,6 +2,35 @@ import { styled } from '@mui/material/styles';
 import { Box, CSSInterpolation, InputBase } from '@mui/material';
 import { getBorderColor } from './utils/getBorderColor';
 
+export const palette = {
+  background: {
+    primary: '#0F1120',
+    secondary: '#1F2237',
+    tertiary: '#06060D'
+  },
+  border: {
+    primary: '#626472',
+    // secondary: '#626472',
+  },
+  text: {
+    primary: '#E8E8EA',
+    secondary: '#93959E',
+    disabled: '#525465',
+    placeholder: '#444657',
+  },
+  disabled: {
+    disabled_01: '#363952',
+    disabled_02: '#525465'
+  },
+  actions: {
+    hover: '#333548',
+    focus: '#CCBC87',
+    active: '#525465',
+    error: ''
+  }
+
+}
+
 export const TimecodeContainer = styled(Box)({
   display: 'flex',
   alignItems: 'center',
@@ -32,7 +61,7 @@ export const TimecodeInputContainer = styled(Box, {
   border: '1px solid',
   borderColor: `${getBorderColor(theme, focused, error, disabled)}`,
   backgroundColor: `${
-    disabled ? 'grey' : 'lightgrey'
+    disabled ? palette.disabled.disabled_01 : palette.background.primary
   }`,
   display: 'flex',
   flexDirection: 'row',
@@ -41,8 +70,8 @@ export const TimecodeInputContainer = styled(Box, {
   paddingRight: '4px',
   '&:not(.Mui-disabled):not(.Mui-focused):hover': {
     borderColor: disabled
-      ? 'pink'
-      : 'purple'
+      ? palette.disabled.disabled_02
+      : palette.border.primary
   } as CSSInterpolation
 }));
 
@@ -66,19 +95,19 @@ export const TimecodeInputBase = styled(InputBase)(
       marginRight: 0,
       ...theme.typography.body1,
       color: readOnly
-        ? 'black'
-        : 'black',
+        ? palette.text.secondary
+        : palette.text.primary,
       input: {
         textAlign: 'center',
         padding: 0,
         height: '22px',
         backgroundColor: 'transparent',
         ':disabled': {
-          backgroundColor: 'white',
-          textFillColor: 'black'
+          backgroundColor: palette.disabled.disabled_01,
+          textFillColor: palette.disabled.disabled_02
         },
         '&::placeholder': {
-          color: 'grey',
+          color: palette.text.placeholder,
           opacity: 1
         }
       },

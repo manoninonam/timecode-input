@@ -1,4 +1,5 @@
 import { styled } from '@mui/material';
+import { palette } from './TimecodeInputStyledComponents';
 import { getBackground } from './utils/getBackground';
 
 interface TimecodeInputButtonProps {
@@ -14,37 +15,37 @@ export const TimecodeInputButton = styled('button', {
   outline: 'none',
   border: '1px solid',
   borderColor: readOnly
-    ? 'grey'
-    : 'red',
+    ? palette.disabled.disabled_01
+    : palette.border.primary,
   borderRadius: position === 'start' ? '4px 0px 0px 4px' : '0px 4px 4px 0px',
   height: '27px',
   ...theme.typography.body2,
   color: readOnly
-    ? 'grey'
-    : 'red',
+    ? palette.text.disabled
+    : palette.text.primary,
   cursor: readOnly ? 'inherit' : 'pointer',
 
   '&:hover': {
     background: getBackground(theme, readOnly),
     borderColor: readOnly
-      ? 'grey'
-      : 'green'
+      ? palette.disabled.disabled_02
+      : palette.actions.hover
   },
   '&:focus-visible': {
     background: getBackground(theme, readOnly),
-    borderColor: 'grey'
+    borderColor: palette.actions.focus
   },
   '&:active': {
     background: getBackground(
       theme,
       readOnly,
-      'grey'
+      palette.actions.active
     )
   },
   '&:disabled': {
-    borderColor: 'grey',
-    color: 'white',
-    background: 'black',
+    borderColor: palette.disabled.disabled_02,
+    color: palette.disabled.disabled_02,
+    background: palette.disabled.disabled_01,
     cursor: 'inherit'
   }
 }));
