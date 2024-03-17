@@ -1,15 +1,15 @@
 import { Stack } from "@mui/material";
 import {
-  ExampleTimecodeContainer,
+  DocumentationTimecodeContainer,
   DocumentationTimecodeContainerText,
-} from "../DisplayComponents";
+} from "../../documentation/DocumentationLayoutComponents";
 import { ControlledTimecode } from "./ControlledTimecode";
 import { TimecodeWithValue } from "./TimecodeWithValue";
 import ButtonIconsExample from "./ButtonIconsExample";
 
 const UsageExamples = () => {
   return (
-    <ExampleTimecodeContainer direction="row" spacing={5}>
+    <DocumentationTimecodeContainer direction="row" spacing={5}>
       <Stack>
         <DocumentationTimecodeContainerText>
           Controlled timecode
@@ -23,7 +23,7 @@ const UsageExamples = () => {
         <TimecodeWithValue />
       </Stack>
       <ButtonIconsExample />
-    </ExampleTimecodeContainer>
+    </DocumentationTimecodeContainer>
   );
 };
 

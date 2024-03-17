@@ -1,13 +1,13 @@
 import { Container, Stack, Typography } from "@mui/material";
-import ExampleTitle from "./documentation/ExampleTitle";
-import DocumentationText, {
-  documentationTextObj,
-} from "./documentation/DocumentationText";
-import FramerateExample from "./documentation/examples/FramerateExample";
-import DirectionExample from "./documentation/examples/DirectionExample";
-import UsageExamples from "./documentation/examples/UsageExamples";
+import DocumentationTitle from "./documentation/DocumentationTitle";
+import DocumentationText from "./documentation/DocumentationText";
+import { documentationTextObject } from "./documentation/documentationTextObject";
+import FramerateExample from "./components/examples/FramerateExample";
+import DirectionExample from "./components/examples/DirectionExample";
+import UsageExamples from "./components/examples/UsageExamples";
+import { DocumentationTopContainer } from "./documentation/DocumentationLayoutComponents";
 
-const { framerate, ltrVsRtl } = documentationTextObj;
+const { framerate, ltrVsRtl } = documentationTextObject;
 
 function App() {
   return (
@@ -25,18 +25,18 @@ function App() {
           SMPTE timecode is used extensively for synchronization, and for
           logging and identifying material in recorded media.
         </Typography>
-        <ExampleTitle title={framerate.title} />
+        <DocumentationTitle title={framerate.title} />
         <Stack spacing={2} py={2}>
-          <Stack direction={{ xs: "column", sm: "row" }}>
+          <DocumentationTopContainer>
             <FramerateExample />
             <DocumentationText props={framerate} />
-          </Stack>
-          <ExampleTitle title={ltrVsRtl.title} />
-          <Stack direction={{ xs: "column", sm: "row" }}>
+          </DocumentationTopContainer>
+          <DocumentationTitle title={ltrVsRtl.title} />
+          <DocumentationTopContainer>
             <DirectionExample />
             <DocumentationText props={ltrVsRtl} />
-          </Stack>
-          <ExampleTitle title={"Usage examples"} />
+          </DocumentationTopContainer>
+          <DocumentationTitle title={"Usage examples"} />
           <UsageExamples />
         </Stack>
       </Container>

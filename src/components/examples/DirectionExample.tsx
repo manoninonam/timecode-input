@@ -1,13 +1,13 @@
 import { Stack } from "@mui/material";
-import TimecodeInput from "../../components/TimecodeInput/TimecodeInput";
+import TimecodeInput from "../TimecodeInput/TimecodeInput";
 import {
-  ExampleTimecodeContainer,
+  DocumentationTimecodeContainer,
   DocumentationTimecodeContainerText,
-} from "../DisplayComponents";
+} from "../../documentation/DocumentationLayoutComponents";
 
 const DirectionExample = () => {
   return (
-    <ExampleTimecodeContainer spacing={3}>
+    <DocumentationTimecodeContainer spacing={3}>
       <Stack>
         <DocumentationTimecodeContainerText>
           LTR
@@ -20,7 +20,7 @@ const DirectionExample = () => {
         </DocumentationTimecodeContainerText>
         <TimecodeInput rtl frameRate={30} />
       </Stack>
-    </ExampleTimecodeContainer>
+    </DocumentationTimecodeContainer>
   );
 };
 

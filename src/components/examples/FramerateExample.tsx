@@ -1,10 +1,10 @@
 import { Stack } from "@mui/material";
-import TimecodeInput from "../../components/TimecodeInput/TimecodeInput";
-import { ExampleTimecodeContainer, DocumentationTimecodeContainerText } from "../DisplayComponents";
+import TimecodeInput from "../TimecodeInput/TimecodeInput";
+import { DocumentationTimecodeContainer, DocumentationTimecodeContainerText } from "../../documentation/DocumentationLayoutComponents";
 
 const FramerateExample = () => {
   return (
-    <ExampleTimecodeContainer spacing={3}>
+    <DocumentationTimecodeContainer spacing={3}>
       <Stack>
         <DocumentationTimecodeContainerText>
           Drop frame timecode
@@ -17,7 +17,7 @@ const FramerateExample = () => {
         </DocumentationTimecodeContainerText>
         <TimecodeInput frameRate={30} />
       </Stack>
-    </ExampleTimecodeContainer>
+    </DocumentationTimecodeContainer>
   );
 };
 

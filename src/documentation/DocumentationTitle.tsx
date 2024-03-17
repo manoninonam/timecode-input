@@ -5,7 +5,7 @@ type ExampleTitleProps = {
   title: string
 }
 
-const ExampleTitle = ({ title }: ExampleTitleProps) => {
+const DocumentationTitle = ({ title }: ExampleTitleProps) => {
   return (
     <Box>
       <Typography component="h2" variant="h5">
@@ -16,4 +16,4 @@ const ExampleTitle = ({ title }: ExampleTitleProps) => {
   );
 };
 
-export default ExampleTitle
+export default DocumentationTitle

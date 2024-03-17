@@ -1,6 +1,6 @@
 
 import { Box, Stack } from '@mui/material';
-import TimecodeInput from '../../components/TimecodeInput/TimecodeInput';
+import TimecodeInput from '../TimecodeInput/TimecodeInput';
 import { useState } from 'react';
 import { palette } from '../../utils/palette';
 
