@@ -1,5 +1,5 @@
 import { styled } from '@mui/material';
-import { palette } from './TimecodeInputStyledComponents';
+import { palette } from '../../utils/palette';
 import { getBackground } from './utils/getBackground';
 
 interface TimecodeInputButtonProps {

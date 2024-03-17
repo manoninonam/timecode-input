@@ -6,16 +6,17 @@ import { TimecodeWithValue } from "./examples/TimecodeWithValue";
 
 function App() {
   return (
-    <div className="App">
-      <Stack spacing={2} p={2}>
+    <main className="App">
+      <Typography component='h1' variant='h5'>Timecode input</Typography>
+      <Stack spacing={2} py={2}>
+        <Typography component='h2' variant='h6'>Examples</Typography>
         <TimecodeInput frameRate={25} />
         <TimecodeInput frameRate={29.97}/>
-        <Typography>Examples</Typography>
         <ControlledTimecode />
         <ControlledTimecodeWithRTL />
         <TimecodeWithValue />
       </Stack>
-    </div>
+    </main>
   );
 }
 

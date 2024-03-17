@@ -1,8 +1,8 @@
 
-import { Box, Stack } from '@mui/material'
+import { Box, Stack } from '@mui/material';
 import TimecodeInput from '../components/TimecodeInput/TimecodeInput';
 import { useState } from 'react';
-import { palette } from '../components/TimecodeInput/TimecodeInputStyledComponents';
+import { palette } from '../utils/palette';
 
 
 export const TimecodeWithValue = () => {

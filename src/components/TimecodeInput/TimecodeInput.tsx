@@ -1,12 +1,12 @@
 import { OutlinedInputProps, Typography } from '@mui/material';
 import {
-  palette,
   TimecodeContainer,
   TimecodeInputBase,
   TimecodeInputBaseContainer,
   TimecodeInputBaseHighlight,
   TimecodeInputContainer
 } from './TimecodeInputStyledComponents';
+import { palette } from '../../utils/palette';
 import {
   ChangeEvent,
   Fragment,

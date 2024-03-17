@@ -1,5 +1,5 @@
 import { Theme } from '@mui/material';
-import { palette } from '../TimecodeInputStyledComponents';
+import { palette } from '../../../utils/palette';
 
 export const getBorderColor = (
   theme: Theme,
