@@ -11,7 +11,7 @@ export const TimecodeWithValue = () => {
     setValue(timecode);
   };
   return (
-    <Stack direction='row' gap={5}>
+    <Stack gap={1}>
       <TimecodeInput
         value={value}
         defaultValue={'00:00:00;00'}
@@ -23,6 +23,7 @@ export const TimecodeWithValue = () => {
           display: 'flex',
           alignItems: 'center',
           background: palette.disabled.disabled_01,
+          width: '90px',
           letterSpacing: '1px',
           padding: '0 10px',
           borderRadius: '8px',
