@@ -1,15 +1,17 @@
 # About this project
 
-This project is a playground to work on my skills and experiment with different libraries/dependencies. 
+This project features a custom made input field to handle timecodes. 
 
 ## Current stack
 
 * Typescript
 * React 
 * MUI
+* SMPTE-timecode
 
 ## Yet to implement
-* React testing library
-* Redux toolkit (if I can think about a feature that makes it worthwile to implement it)
+
+* Fix test
+* Move documentation to storybook
 
 
