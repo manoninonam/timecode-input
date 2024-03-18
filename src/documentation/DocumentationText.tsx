@@ -1,17 +1,26 @@
 import { Typography } from "@mui/material";
 import { DocumentationTextContainer } from "./DocumentationLayoutComponents";
-import DocumentationTextAccordion from "./DocumentationTextAccordion";type DocumentationTextProps = {
-  props: {
+import DocumentationTextAccordion from "./DocumentationTextAccordion";
+
+type DocumentationProps = {
+   props: {
     title: string;
-    content: {
-      text: string;
-      subContent: any;
-    };
+    content: DocumentationContentProps
     isAccordeon: boolean;
   };
 };
 
-const DocumentationText = ({ props }: DocumentationTextProps) => {
+export type DocumentationContentProps = {
+    text: string;
+    subContent: DocumentationSubTextProps[] | undefined ;
+}
+
+type DocumentationSubTextProps = {
+  title: string
+  text: string
+}
+
+const DocumentationText = ({ props }: DocumentationProps) => {
   const { content, isAccordeon } = props;
 
   return (

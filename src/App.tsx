@@ -2,9 +2,9 @@ import { Container, Stack, Typography } from "@mui/material";
 import DocumentationTitle from "./documentation/DocumentationTitle";
 import DocumentationText from "./documentation/DocumentationText";
 import { documentationTextObject } from "./documentation/documentationTextObject";
-import FramerateExample from "./components/examples/FramerateExample";
-import DirectionExample from "./components/examples/DirectionExample";
-import UsageExamples from "./components/examples/UsageExamples";
+import FramerateExample from "./components/TimecodeInput/examples/FramerateExample";
+import DirectionExample from "./components/TimecodeInput/examples/DirectionExample";
+import UsageExamples from "./components/TimecodeInput/examples/UsageExamples";
 import { DocumentationTopContainer } from "./documentation/DocumentationLayoutComponents";
 
 const { framerate, ltrVsRtl } = documentationTextObject;

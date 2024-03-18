@@ -2,7 +2,7 @@ import { Stack } from "@mui/material";
 import {
   DocumentationTimecodeContainer,
   DocumentationTimecodeContainerText,
-} from "../../documentation/DocumentationLayoutComponents";
+} from "../../../documentation/DocumentationLayoutComponents";
 import { ControlledTimecode } from "./ControlledTimecode";
 import { TimecodeWithValue } from "./TimecodeWithValue";
 import ButtonIconsExample from "./ButtonIconsExample";

@@ -1,6 +1,6 @@
 
-import TimecodeInput from '../TimecodeInput/TimecodeInput'
-import { TimecodeInputButton } from '../TimecodeInput/TimecodeInputButton'
+import TimecodeInput from '../TimecodeInput'
+import { TimecodeInputButton } from '../TimecodeInputButton'
 import { useState } from 'react';
 
 export const ControlledTimecode = () => {

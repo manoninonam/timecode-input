@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
-import TimecodeInput from "../TimecodeInput/TimecodeInput";
-import { DocumentationTimecodeContainer, DocumentationTimecodeContainerText } from "../../documentation/DocumentationLayoutComponents";
+import TimecodeInput from "../TimecodeInput";
+import { DocumentationTimecodeContainer, DocumentationTimecodeContainerText } from "../../../documentation/DocumentationLayoutComponents";
 
 const FramerateExample = () => {
   return (

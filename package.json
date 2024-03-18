@@ -43,6 +43,7 @@
         ]
     },
     "devDependencies": {
+        "@babel/preset-react": "^7.23.3",
         "@types/smpte-timecode": "^1.2.4",
         "typescript": "^5.4.2"
     }

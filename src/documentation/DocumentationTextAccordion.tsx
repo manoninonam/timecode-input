@@ -7,19 +7,18 @@ import {
   Typography,
 } from "@mui/material";
 import { palette } from "../utils/palette";
+import { DocumentationContentProps } from "./DocumentationText";
 
 type DocumentationTextAccordionProps = {
-  content: {
-    text: string;
-    subContent: any;
-  };
+  content: DocumentationContentProps
 };
-
+ 
 const DocumentationTextAccordion = ({
   content,
 }: DocumentationTextAccordionProps) => {
   const { text, subContent } = content;
 
+  console.log(subContent)
   return (
     <Accordion
       disableGutters
@@ -35,12 +34,12 @@ const DocumentationTextAccordion = ({
         <Typography>{text}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        {Object.entries(subContent).map(([key, value]: any) => (
-          <Stack key={key}>
+        {subContent?.map((subContentItem: any, i) => (
+          <Stack key={i}>
             <Typography sx={{ fontStyle: "italic", paddingTop: 2 }}>
-              {value.title}
+              {subContentItem.title}
             </Typography>
-            <Typography>{value.text}</Typography>
+            <Typography>{subContentItem.text}</Typography>
           </Stack>
         ))}
       </AccordionDetails>

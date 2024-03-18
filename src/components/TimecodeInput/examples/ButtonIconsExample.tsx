@@ -1,12 +1,12 @@
 import { Stack } from "@mui/material";
-import TimecodeInput from "../TimecodeInput/TimecodeInput";
-import { DocumentationTimecodeContainerText } from "../../documentation/DocumentationLayoutComponents";
+import TimecodeInput from "../TimecodeInput";
+import { DocumentationTimecodeContainerText } from "../../../documentation/DocumentationLayoutComponents";
 import {
   MarkIn,
   MarkOut,
   MarkerFilled,
-} from "../TimecodeInput/TimecodeInputIcons";
-import { TimecodeInputButton } from "../TimecodeInput/TimecodeInputButton";
+} from "../TimecodeInputIcons";
+import { TimecodeInputButton } from "../TimecodeInputButton";
 
 const ButtonIconsExample = () => {
   return (

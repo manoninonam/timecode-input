@@ -3,6 +3,8 @@ import { Stack, Box, Typography } from "@mui/material";
 import { palette } from "../utils/palette";
 import { PropsWithChildren } from "react";
 
+const borderStyle = `${palette.border.inverted} 1px solid`
+
 export const DocumentationTopContainer = ({ children }: PropsWithChildren) => {
   return <Stack direction={{ xs: "column", sm: "row" }}>{children}</Stack>;
 };
@@ -10,12 +12,12 @@ export const DocumentationTopContainer = ({ children }: PropsWithChildren) => {
 export const DocumentationTimecodeContainer = styled(Stack)({
   minWidth: "150px",
   padding: "12px",
-  border: "white 1px solid",
+  border: borderStyle
 });
 
 export const DocumentationTextContainer = styled(Box)({
   padding: "12px",
-  border: "white 1px solid",
+  border: borderStyle,
   backgroundColor: palette.background.textfield,
   flexGrow: 1,
 });

@@ -1,9 +1,9 @@
 import { Stack } from "@mui/material";
-import TimecodeInput from "../TimecodeInput/TimecodeInput";
+import TimecodeInput from "../TimecodeInput";
 import {
   DocumentationTimecodeContainer,
   DocumentationTimecodeContainerText,
-} from "../../documentation/DocumentationLayoutComponents";
+} from "../../../documentation/DocumentationLayoutComponents";
 
 const DirectionExample = () => {
   return (
