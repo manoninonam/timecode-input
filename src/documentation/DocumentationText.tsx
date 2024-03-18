@@ -6,7 +6,7 @@ type DocumentationProps = {
    props: {
     title: string;
     content: DocumentationContentProps
-    isAccordeon: boolean;
+    isAccordion: boolean;
   };
 };
 
@@ -21,11 +21,15 @@ type DocumentationSubTextProps = {
 }
 
 const DocumentationText = ({ props }: DocumentationProps) => {
-  const { content, isAccordeon } = props;
+  const { content, isAccordion } = props;
 
   return (
-    <DocumentationTextContainer>
-      {isAccordeon ? (
+    <DocumentationTextContainer sx={{
+      ...(!isAccordion && {
+        padding:'12px'
+      })
+    }}>
+      {isAccordion ? (
         <DocumentationTextAccordion content={content} />
       ) : (
         <Typography>{content.text}</Typography>

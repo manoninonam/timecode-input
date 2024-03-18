@@ -60,11 +60,11 @@ export const TimecodeInputBaseHighlight = styled(Box)({
 });
 
 export const TimecodeInputBase = styled(InputBase)(
-  ({ theme, readOnly }) =>
+  ({ readOnly }) =>
     ({
       width: '22px',
       marginRight: 0,
-      ...theme.typography.body1,
+      fontFamily: 'Roboto Mono, monospace',
       color: readOnly
         ? palette.text.secondary
         : palette.text.primary,

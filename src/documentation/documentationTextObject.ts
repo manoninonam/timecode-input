@@ -12,7 +12,7 @@ export const documentationTextObject = {
             text: "In the drop frame method, the frame rate is specified as a fraction, such as 29.97fps or 59.94fps. This means that the actual rate at which frames are displayed is slightly lower than the specified rate, and some frames are “dropped” in order to maintain a consistent rate. This method is typically used when the video will be broadcast over television, where the frame rate must be synchronized with the broadcast signal.",
            }]
       },
-      isAccordeon: true,
+      isAccordion: true,
     },
     ltrVsRtl: {
       title: "LTR vs RTL",
@@ -20,6 +20,6 @@ export const documentationTextObject = {
         text: "To accomodate the different preferences in direction while inserting a timecode, two variants have been made. One supporting left-to-right input, the other supporting right-to-left input",
         subContent: undefined
       },
-      isAccordeon: false,
+      isAccordion: false,
     },
   };
